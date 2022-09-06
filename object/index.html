@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <script src="main.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <script>
+      const products = [
+        { 제품명: "탐사수", 가격: 500, 무게: 25 },
+        { 제품명: "화장지", 가격: 500, 무게: 10 },
+        { 제품명: "모니터", 가격: 100000, 무게: 200 },
+        { 제품명: "마우스", 가격: 12000, 무게: 40 },
+      ];
+
+      const result = _.orderBy(products, ["가격", "무게"], ["desc", "asc"]);
+      console.log(result);
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Object 실습</h1>
+  </body>
+</html>
