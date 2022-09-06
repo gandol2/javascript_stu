@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      /*const myPrint = (...data) => {
+              // process.stdout.write(data[0]);
+              process
+            };
+
+            myPrint("안녕", "하세요", "선문대", "입니다");
+            */
+      // const studentInfo = (name, home = "기숙사", subjectCount = 10) => {
+      //   console.log(`학생 이름 : ${name}`);
+      //   console.log(`사는곳 : ${home}`);
+      //   console.log(`수강과목 : ${subjectCount}`);
+      //   console.log("-----------------");
+      // };
+      // studentInfo("홍길동", "기숙사", 5);
+      // studentInfo("홍길동", (subjectCount = 10));
+
+      // [2, 4, 6].map((cur, idx, arr) => console.log(this));
+
+      // String.prototype.contain = function (data) {
+      //   return `${this} + ${data}`;
+      // };
+      // console.log("test".contain("dd"));
+      const min = (arr) => {
+        let result = arr[0];
+        for (var i = 1; i < arr.length; ++i) {
+          if (result > arr[i]) {
+            result = arr[i];
+          }
+        }
+        return result;
+      };
+      const max = (arr) => {
+        let result = arr[0];
+        for (var i = 1; i < arr.length; ++i) {
+          if (result < arr[i]) {
+            result = arr[i];
+          }
+        }
+        return result;
+      };
+      const myFunc = (type, arr) => {
+        switch (type) {
+          case "min":
+            return min(arr);
+          case "max":
+            return max(arr);
+          default:
+            console.log(`type이 잘못 되었습니다. (${type})`);
+            break;
+        }
+      };
+
+      const inputArr = [10, 50, 2, 10, 500, 20, 62];
+      // console.log(min(inputArr));
+      // console.log(max(inputArr));
+      console.log(myFunc("min", inputArr));
+      console.log(myFunc("max", inputArr));
+      console.log(myFunc("zzz", inputArr));
+    </script>
+  </head>
+  <body></body>
+</html>

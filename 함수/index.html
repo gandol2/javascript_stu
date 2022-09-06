@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function number(num) {
+        if (0 > num) {
+          throw {
+            name: "min_value_err",
+            message: "10이상 값을 입력 해야 합니다",
+          };
+        } else if (100 < num) {
+          throw {
+            name: "max_value_err",
+            message: "10이하 값을 입력 해야 합니다",
+          };
+        }
+        return num;
+      }
+
+      try {
+        console.log(number(100));
+        console.log(number(101));
+      } catch (err) {
+        console.log(`💢 오류발생 ${JSON.stringify(err)}`);
+
+        console.log(`💢 에러명 ${err.name}, 메시지 : ${err.message}`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
